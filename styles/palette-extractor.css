@@ -1,0 +1,111 @@
+.nav-bar {
+    height: 60px;
+    background-color: #6092d9;
+    align-items: center;
+}
+
+.nav-bar-label {
+    position: absolute;
+    left: 37%;
+    top: 12px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+body {
+    background-color: rgb(231, 227, 227);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.drop-area {
+    background-color: #ffffff;
+    height: 500px;
+    width: 700px;
+    position: relative;
+    margin: auto;
+    top: 80px;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+}
+
+.help-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: #6092d9;
+    border-radius: 50%;
+    border: 0px;
+    color: white;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+.help-button:hover {
+    height: 105px;
+    width: 105px;
+    transition: 120ms;
+    transform-style: flat;
+    transform-origin: 50% 50%;
+}
+
+.palette-area {
+    background-color: #ffffff;
+    height: 600px;
+    width: 800px;
+    position: relative;
+    margin: auto;
+    top: 80px;
+    border-radius: 25px;
+}
+
+.palette-content {
+    top: 80px;
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.image-palette-content {
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    top: 50px;
+}
+
+.image-palette {
+    width: 500px;
+    height: 350px;
+    top: 20px;
+}
+
+.canvas {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.color-tag-content {
+    margin: auto;
+    position: relative;
+    top: 80px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.color-tag-label {
+    width: 100px;
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Consolas, sans-serif;
+    font-weight: bold;
+}
