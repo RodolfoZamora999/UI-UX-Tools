@@ -1,6 +1,13 @@
+body {
+    background-color: rgb(231, 227, 227);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .nav-bar {
     height: 60px;
-    background-color: #6092d9;
+    background-color: #346ec0;
     align-items: center;
 }
 
@@ -12,14 +19,6 @@
     color: white;
     font-weight: bold;
     font-family: sans-serif;
-}
-
-
-body {
-    background-color: rgb(231, 227, 227);
-    height: 100%;
-    width: 100%;
-    position: absolute;
 }
 
 .drop-area {
@@ -39,7 +38,7 @@ body {
     right: 20px;
     height: 100px;
     width: 100px;
-    background-color: #6092d9;
+    background-color: #346ec0;
     border-radius: 50%;
     border: 0px;
     color: white;
@@ -48,11 +47,11 @@ body {
 }
 
 .help-button:hover {
-    height: 105px;
+    /*height: 105px;
     width: 105px;
     transition: 120ms;
     transform-style: flat;
-    transform-origin: 50% 50%;
+    transform-origin: 50% 50%;*/
 }
 
 .palette-area {
