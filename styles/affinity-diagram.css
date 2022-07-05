@@ -1,11 +1,13 @@
 body {
     background-image: url("../images/background_lines.svg");
     background-color: white;
+    cursor: grab;
+    overflow: hidden; /* Hide scrollbars */
 }
 
 .nav-bar {
     height: 60px;
-    background-color: #c766d5;
+    background-color: #4a74b4;
     align-items: center;
 }
 
@@ -26,7 +28,7 @@ body {
     right: 20px;
     height: 100px;
     width: 100px;
-    background-color: #c766d5;
+    background-color: #4a74b4;
     border-radius: 50%;
     border: 0px;
     color: white;
@@ -48,6 +50,12 @@ body {
     width: 95px;
 }
 
+.card-zone {
+    height: 90%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+}
 
 .card {
     width: fit-content;
@@ -61,6 +69,7 @@ body {
     position: absolute;
     user-select: none;
     align-items: center;
+    cursor: default;
 }
 
 .card-head {
