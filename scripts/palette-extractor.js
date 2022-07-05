@@ -149,8 +149,36 @@ function configDropFile() {
     dropArea.ondrop = eventOnDrop => {
         eventOnDrop.stopPropagation();
         eventOnDrop.preventDefault();
-
         let file = eventOnDrop.dataTransfer.files[0]
+        processImageFile(file)
+        eventOnDrop.dataTransfer.clearData()
+    }
+
+    dropArea.onclick = onClickEvent => {
+        onClickEvent.preventDefault()
+        onClickEvent.stopPropagation()
+
+        const pickerOpts = {
+            types: [
+                {
+                    description: 'Images',
+                    accept: {
+                        'image/*': ['.png', '.jpeg', '.jpg']
+                    }
+                },
+            ],
+            excludeAcceptAllOption: true,
+            multiple: false
+        };
+
+        window.showOpenFilePicker(pickerOpts).then(value => {
+            value[0].getFile().then(imageFile => {
+               processImageFile(imageFile)
+            })
+        })
+    }
+
+    function processImageFile(file) {
         console.log(file.type)
         if (file.type === "image/png" || file.type === "image/jpeg") {
             let image = new Image()
@@ -160,8 +188,6 @@ function configDropFile() {
                 updateInterface(image)
             }
         }
-
-        eventOnDrop.dataTransfer.clearData()
     }
 }
 
