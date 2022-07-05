@@ -158,24 +158,14 @@ function configDropFile() {
         onClickEvent.preventDefault()
         onClickEvent.stopPropagation()
 
-        const pickerOpts = {
-            types: [
-                {
-                    description: 'Images',
-                    accept: {
-                        'image/*': ['.png', '.jpeg', '.jpg']
-                    }
-                },
-            ],
-            excludeAcceptAllOption: true,
-            multiple: false
-        };
-
-        window.showOpenFilePicker(pickerOpts).then(value => {
-            value[0].getFile().then(imageFile => {
-               processImageFile(imageFile)
-            })
-        })
+        let input = document.createElement("input")
+        input.type = "file"
+        input.accept = "image/jpeg, image/png"
+        input.click()
+        input.onchange = onChangeEvent => {
+            const fileList = onChangeEvent.target.files
+            processImageFile(fileList[0])
+        }
     }
 
     function processImageFile(file) {
